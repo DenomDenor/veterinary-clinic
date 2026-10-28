@@ -15,4 +15,4 @@ https://vietierinarnaia-klinika--DaryaDreit.replit.app
 Примечание: доступ к приложению через Replit может требовать VPN в зависимости от региона и сетевых ограничений.
 
 Исходный код и документация:
-https://github.com/DenomDenor/veterinary-clinic
+[https://github.com/DenomDenor/veterinary-clinic](https://github.com/DenomDenor/veterinary-clinic/tree/main/app)
