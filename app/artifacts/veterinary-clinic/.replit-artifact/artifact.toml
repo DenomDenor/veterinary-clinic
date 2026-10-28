@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Ветеринарная клиника"
+description = "Учебная информационная система клиники для учёта владельцев, животных, врачей и ветеринарных приёмов с сохранением данных."
+version = "1.0.0"
+id = "artifacts/veterinary-clinic"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18087
+
+[services.development]
+run = "pnpm --filter @workspace/veterinary-clinic run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/veterinary-clinic", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/veterinary-clinic/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18087"
+BASE_PATH = "/"
